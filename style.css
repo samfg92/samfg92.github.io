@@ -1,0 +1,415 @@
+
+/* ---- General Styling ---- */
+* {
+margin: 0;
+padding: 0;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	background-color: #161616;
+	color: #FFFFFF;
+	background: #161616;
+	font-family: 'IBM Plex Mono', monospace
+}
+
+p, p.links {
+	color: #FFFFFF;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 15px
+}
+
+h1 {
+	color: #FFFFFF;
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: 25px
+}
+
+h2 {
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+}
+
+h3 {
+	color: #FFFFFF;
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: 30px
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none
+}
+
+sup {
+	color: #757575;
+	font-size: 9px;
+}
+
+a:hover {
+	color: #D3D3D3;
+	text-decoration: none
+}
+
+/* ---- Site Title & Heading ---- */
+
+.heading {
+	color: #FFFFFF;
+	width: 400px;
+	pointer-events: none;
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: 30px;
+	margin: 0 auto;
+	position: absolute;
+	text-align: center;
+	top: 325px;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+.subtitle {
+	width: 400px;
+	margin: 0 auto;
+	position: absolute;
+	text-align: center;
+	top: 360px;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+.subtitle-text {
+	pointer-events: none;
+	text-decoration: none
+}
+
+.spacer-heading {
+	height: 120px
+}
+
+.spacer-small {
+	height: 50px
+}
+
+/* ---- Flex Box ---- */
+
+.flex {
+	background-color: #161616;
+	height: 300px;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	right: 50%;
+	justify-content: center;
+
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: space-between;
+	align-items: flex-start;
+
+}
+
+.flex-container-about {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding-left: 20%;
+	padding-right: 20%;
+	justify-content: center;
+
+}
+
+.flex-container-links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding-left: 10%;
+	padding-right: 10%
+}
+
+.flex-grid-thirds {
+	flex-direction: row;
+	display: flex;
+	justify-content:center;
+}
+
+.flex-grid-thirds .col {
+	width: 100%;
+}
+
+.col {
+	padding: 20px;
+}
+
+/* ---- Footer ---- */
+
+.footer {
+	color: #969696;
+	font-size: 12px;
+	font-family: 'IBM Plex Mono', monospace;
+	padding-top: 40px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+/* ---- Tilting Image ---- */
+
+.image {
+	background-image: url("https://source.unsplash.com/200x300/?map");
+	background-size: cover;
+	position: relative;
+	height: 300px;
+	width: 200px
+}
+
+.tilt {
+	transform-style: preserve-3d;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+	transform: translateZ(20px)
+}
+
+/* ---- Hamburger Menu ---- */
+
+#hamburger {
+	display: none
+}
+.menu {
+	display: block;
+	background-color: #161616;
+	width: 0;
+	overflow: hidden;
+	padding-top: 30px;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-ms-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s
+}
+.menu ul {
+	padding-left: 10px
+}
+.menu ul li {
+	font-size: 12pt;
+	padding: 8px 8px
+}
+@media (min-width: 320px) and (max-width: 480px) {
+	.menu ul li {
+		font-size: 8pt;
+		padding: 8px 8px
+	}
+}
+.menu ul li a {
+	font-family: 'IBM Plex Mono', monospace;
+	text-decoration: none;
+	color: #FFFFFF
+}
+.menu ul li a:hover {
+	color: #808080
+}
+.menuicon {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: block;
+	cursor: pointer;
+	height: 21px;
+	width: 25px
+}
+.menuicon span {
+	display: block;
+	top: 8px;
+	width: 25px;
+	height: 5px;
+	background-color: #FFFFFF;
+	position: relative;
+	-webkit-transition-duration: 0;
+	-moz-transition-duration: 0;
+	-ms-transition-duration: 0;
+	-o-transition-duration: 0;
+	transition-duration: 0;
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-ms-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s
+}
+.menuicon span::after,
+.menuicon span::before {
+	display: block;
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 5px;
+	background-color: #FFFFFF;
+	-webkit-transition-property: margin, -webkit-transform;
+	-webkit-transition-duration: 0.2s;
+	-moz-transition-duration: 0.2s;
+	-ms-transition-duration: 0.2s;
+	-o-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s, 0;
+	-moz-transition-delay: 0.2s, 0;
+	-ms-transition-delay: 0.2s, 0;
+	-o-transition-delay: 0.2s, 0;
+	transition-delay: 0.2s, 0
+}
+.menuicon span::before {
+	margin-top: -8px
+}
+.menuicon span::after {
+	margin-top: 8px
+}
+#hamburger:checked~.menu {
+	width: 250px
+}
+#hamburger:checked~.menuicon span {
+	background-color: rgba(0, 0, 0, 0)
+}
+#hamburger:checked~.menuicon span::before,
+#hamburger:checked~.menuicon span::after {
+	margin-top: 0;
+	-webkit-transition-delay: 0, 0.2s;
+	-moz-transition-delay: 0, 0.2s;
+	-ms-transition-delay: 0, 0.2s;
+	-o-transition-delay: 0, 0.2s;
+	transition-delay: 0, 0.2s
+}
+#hamburger:checked~.menuicon span::before {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+#hamburger:checked~.menuicon span::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+
+/* ---- Link Tabs ---- */
+
+.wrapper {
+	line-height:24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+}
+
+.links {
+	font-size: 12px;
+	float: center;
+}
+
+.tabs clearfix {
+	display: inline;
+	float: center;
+}
+
+.tabs
+li {
+	align-items: center;
+	display: inline;
+	text-decoration: underline;
+}
+
+.tabgroup
+div {
+	display: inline;
+	float: center;
+}
+
+.clearfix:after {
+	content:"";
+	display: inline-block;
+	clear:both;
+	float: center;
+}
+
+/*  ---- Media Queries -----  */
+
+@media (max-width: 830px) {
+	.tabs
+	li {
+		display: block;
+		align-items: center;
+		text-align: center;
+}
+	}
+
+@media (max-width: 1024px) {
+	.flex-container,.flex-container-about, .flex-container-links, .wrapper {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+	@media (max-width: 412px) {
+		.flex-container,.flex-container-about, .flex-container-links, .wrapper {
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+		p.justify {
+			text-align: justify;
+			font-size: 12px;
+		}
+		h3 {
+			font-size: 20px;
+		}
+		p {
+			font-size: 12px;
+		}
+		a {
+			color: #D3D3D3;
+			text-decoration: underline;
+			font-size: 11px;
+		}
+		.spacer-heading {
+			height: 120px
+		}
+		.spacer-small {
+			height: 30px
+		}
+		.image, .tilt {
+			padding-left: 40%;
+		}
+		sup {
+			font-size: 5px;
+			text-decoration: none;
+		}
+		.flex-grid, .flex-grid-thirds {
+			flex-direction: row;
+			display: block;
+			flex-flow: row nowrap;
+			justify-content: center;
+		}
+	}
+
+/* ---- © 2018 Sam Forsyth-Gray // The Map is not The Territory ---- */
